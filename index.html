@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nithya Jagannathan | Strategic Partnerships Leader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #0f4c75;
+            --highlight: #3282b8;
+            --text: #e8e8e8;
+            --text-muted: #a8a8a8;
+            --background: #0a0a0a;
+            --card-bg: #1a1a2e;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .background-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(50, 130, 184, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(50, 130, 184, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            padding: 4rem 0 3rem;
+            border-bottom: 1px solid rgba(50, 130, 184, 0.2);
+            margin-bottom: 4rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--highlight);
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 2rem;
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-top: 1.5rem;
+        }
+
+        .contact-info a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--highlight);
+        }
+
+        .experience-timeline {
+            background: var(--card-bg);
+            border: 1px solid rgba(50, 130, 184, 0.2);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--text);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-companies {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            gap: 1.5rem;
+            overflow-x: auto;
+            padding: 1rem 0;
+        }
+
+        .company-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            min-width: 100px;
+            flex-shrink: 0;
+        }
+
+        .company-logo {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(50, 130, 184, 0.1);
+            border-radius: 50%;
+            border: 2px solid var(--highlight);
+            transition: all 0.3s ease;
+            padding: 10px;
+        }
+
+        .company-logo:hover {
+            background: rgba(50, 130, 184, 0.2);
+            transform: scale(1.1);
+        }
+
+        .company-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .logo-fallback {
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: 'Crimson Pro', serif;
+        }
+
+        .meta-logo {
+            border-color: #0081FB;
+            background: rgba(0, 129, 251, 0.1);
+        }
+
+        .google-logo {
+            border-color: #4285F4;
+            background: rgba(66, 133, 244, 0.1);
+        }
+
+        .googlex-logo {
+            border-color: #EA4335;
+            background: rgba(234, 67, 53, 0.1);
+        }
+
+        .amazon-logo {
+            border-color: #FF9900;
+            background: rgba(255, 153, 0, 0.1);
+        }
+
+        .nvidia-logo {
+            border-color: #76B900;
+            background: rgba(118, 185, 0, 0.1);
+        }
+
+        .company-name {
+            font-weight: 600;
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+
+        .company-years {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .timeline-arrow {
+            font-size: 1.5rem;
+            color: var(--highlight);
+            font-weight: 300;
+        }
+
+        .journey-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: nowrap;
+            margin: 2rem 0;
+            overflow-x: auto;
+            padding: 0.5rem 0;
+        }
+
+        .flow-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .flow-company {
+            font-weight: 600;
+            font-size: 1rem;
+            white-space: nowrap;
+        }
+
+        .flow-year {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .nvidia-text { color: #76B900; }
+        .amazon-text { color: #FF9900; }
+        .google-text { color: #4285F4; }
+        .googlex-text { color: #EA4335; }
+        .meta-text { color: #0081FB; }
+
+        .flow-arrow {
+            font-size: 1.5rem;
+            color: var(--highlight);
+            flex-shrink: 0;
+        }
+
+        .journey-tagline {
+            text-align: center;
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--highlight);
+            font-style: italic;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(50, 130, 184, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .brand-statement {
+                padding: 2rem 1.5rem;
+            }
+
+            .brand-quote {
+                font-size: 1.5rem;
+            }
+
+            .brand-description {
+                font-size: 1rem;
+            }
+
+            .values-main {
+                font-size: 1.5rem;
+            }
+
+            .values-supporting {
+                font-size: 1rem;
+            }
+
+            .pattern-arrow {
+                display: none;
+            }
+
+            .domains-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .domains-grid {
+                grid-template-columns: 1fr;
+            }
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+            padding: 3rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(50, 130, 184, 0.3);
+        }
+
+        .brand-quote {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .brand-description {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .values-statement {
+            text-align: center;
+            padding: 2rem 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border-left: 4px solid var(--highlight);
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .values-main {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .values-supporting {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .pattern {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .pattern-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .uvp-intro {
+            text-align: center;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pattern-steps {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .pattern-step {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            min-width: 140px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .pattern-step:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .step-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--highlight);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-text {
+            font-size: 0.95rem;
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .pattern-arrow {
+            font-size: 2rem;
+            color: var(--highlight);
+            font-weight: 300;
+        }
+
+        @media (max-width: 768px) {
+            .brand-statement {
+                padding: 2rem 1.5rem;
+            }
+
+            .brand-quote {
+                font-size: 1.5rem;
+            }
+
+            .brand-description {
+                font-size: 1rem;
+            }
+
+            .values-main {
+                font-size: 1.5rem;
+            }
+
+            .values-supporting {
+                font-size: 1rem;
+            }
+
+            .pattern-steps {
+                flex-direction: column;
+            }
+
+            .pattern-arrow {
+                transform: rotate(90deg);
+            }
+        }
+
+        .section {
+            margin-bottom: 4rem;
+            animation: fadeIn 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .section:nth-child(2) { animation-delay: 0.1s; }
+        .section:nth-child(3) { animation-delay: 0.2s; }
+        .section:nth-child(4) { animation-delay: 0.3s; }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--highlight);
+            padding-left: 1rem;
+        }
+
+        .intro {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 2rem;
+        }
+
+        .domains-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .domain-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(50, 130, 184, 0.2);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .domain-card:hover {
+            border-color: var(--highlight);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(50, 130, 184, 0.15);
+        }
+
+        .domain-title {
+            font-weight: 700;
+            color: var(--highlight);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .domain-companies {
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.75rem;
+        }
+
+        .domain-description {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .domain-description ul {
+            margin: 0;
+            padding-left: 1.25rem;
+            list-style-type: disc;
+        }
+
+        .domain-description li {
+            margin-bottom: 0.5rem;
+        }
+
+        .domain-description li:last-child {
+            margin-bottom: 0;
+        }
+
+        .achievements {
+            background: var(--card-bg);
+            border: 1px solid rgba(50, 130, 184, 0.2);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+
+        .achievements h3 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.5rem;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .achievement-item {
+            padding: 1rem;
+            border-left: 3px solid var(--highlight);
+            background: rgba(50, 130, 184, 0.05);
+        }
+
+        .achievement-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--highlight);
+            margin-bottom: 0.25rem;
+        }
+
+        .achievement-text {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .capabilities {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .capability {
+            background: var(--card-bg);
+            border: 1px solid rgba(50, 130, 184, 0.2);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .capability-title {
+            font-weight: 700;
+            color: var(--text);
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .capability-list {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .partnerships {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+
+        .partnerships-title {
+            font-weight: 700;
+            color: var(--text);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .partnership-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .partnership-tag {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 4rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(50, 130, 184, 0.2);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--highlight);
+            color: var(--text);
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--highlight);
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(50, 130, 184, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(50, 130, 184, 0.2);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .domains-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .domains-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-grid"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Nithya Jagannathan</h1>
+            <div class="tagline">Cross-Domain Strategist | Technology Builder/Scaler | AI Frontrunner | Trusted Collaborator</div>
+            <div class="contact-info">
+                <a href="tel:408-693-5563">408-693-5563</a>
+                <a href="mailto:nithyajags@gmail.com">nithyajags@gmail.com</a>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="experience-timeline">
+                <div class="timeline-title">From Silicon to Everything Built on Top — And Back</div>
+                <div class="timeline-subtitle">Started with GPUs at NVIDIA • Explored consumer electronics, robotics, telepresence • Returned to AI silicon at Meta just in time for the AI revolution</div>
+                <div class="journey-flow">
+                    <div class="flow-item">
+                        <span class="flow-company nvidia-text">NVIDIA</span>
+                        <span class="flow-year">2006-12</span>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-item">
+                        <span class="flow-company amazon-text">Amazon</span>
+                        <span class="flow-year">2012-14</span>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-item">
+                        <span class="flow-company">
+                            <span style="color: #4285F4;">G</span><span style="color: #EA4335;">o</span><span style="color: #FBBC04;">o</span><span style="color: #4285F4;">g</span><span style="color: #34A853;">l</span><span style="color: #EA4335;">e</span> Chrome
+                        </span>
+                        <span class="flow-year">2014-19</span>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-item">
+                        <span class="flow-company">
+                            <span style="color: #4285F4;">G</span><span style="color: #EA4335;">o</span><span style="color: #FBBC04;">o</span><span style="color: #4285F4;">g</span><span style="color: #34A853;">l</span><span style="color: #EA4335;">e</span> <span style="color: var(--text);">X</span>
+                        </span>
+                        <span class="flow-year">2019-22</span>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-item">
+                        <span class="flow-company">
+                            <span style="color: #4285F4;">G</span><span style="color: #EA4335;">o</span><span style="color: #FBBC04;">o</span><span style="color: #4285F4;">g</span><span style="color: #34A853;">l</span><span style="color: #EA4335;">e</span> Starline/Beam
+                        </span>
+                        <span class="flow-year">2022-24</span>
+                    </div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-item">
+                        <span class="flow-company meta-text">Meta</span>
+                        <span class="flow-year">2024-Now</span>
+                    </div>
+                </div>
+                <div class="journey-tagline">Full Circle — Just in Time for AI</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="brand-statement">
+                <div class="brand-quote">
+                    "I identify strategic opportunities in cutting-edge technology and build the capabilities and partnerships to bring them to scale."
+                </div>
+                <div class="brand-description">
+                    Over 20 years at Meta, Google, Amazon, and NVIDIA, I've built 0-1 engineering verticals across 
+                    AI infrastructure, consumer electronics, robotics, and telepresence—delivering $8M+ in cost savings 
+                    and 30x productivity gains. I deploy systems thinking and take a macro view to strategize, translate 
+                    emerging technology complexity into strategic frameworks, and establish critical capabilities from scratch.
+                </div>
+                <div class="values-statement">
+                    <div class="values-main">I GET THINGS DONE.</div>
+                    <div class="values-supporting">I love what I do and do what I love, aligned with my core values of being a trusted and reliable collaborator.</div>
+                </div>
+                <div class="pattern">
+                    <div class="pattern-title">Unique Value Proposition</div>
+                    <p class="uvp-intro">
+                        Strategist with 20 years navigating organizational complexity, ambiguous technical landscapes, 
+                        competing priorities, and cross-company partnerships across 4 distinct domains.
+                    </p>
+                    <div class="pattern-steps">
+                        <div class="pattern-step">
+                            <div class="step-number">01</div>
+                            <div class="step-text">See the gap</div>
+                        </div>
+                        <div class="pattern-arrow">→</div>
+                        <div class="pattern-step">
+                            <div class="step-number">02</div>
+                            <div class="step-text">Build the capability</div>
+                        </div>
+                        <div class="pattern-arrow">→</div>
+                        <div class="pattern-step">
+                            <div class="step-number">03</div>
+                            <div class="step-text">Form the partnerships</div>
+                        </div>
+                        <div class="pattern-arrow">→</div>
+                        <div class="pattern-step">
+                            <div class="step-number">04</div>
+                            <div class="step-text">Drive the outcome</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="domains-grid">
+                <div class="domain-card">
+                    <div class="domain-title">AI & Infrastructure</div>
+                    <div class="domain-companies">Meta, NVIDIA</div>
+                    <div class="domain-description">
+                        <ul>
+                            <li>Built RAS and diagnostics verticals for hyperscale AI accelerators partnering with Broadcom</li>
+                            <li>Patented novel silicon optimization (Meta)</li>
+                            <li>Contributed to high-speed I/O standards (HDMI, DisplayPort) for GPUs powering today's AI revolution (NVIDIA)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="domain-card">
+                    <div class="domain-title">Consumer Electronics</div>
+                    <div class="domain-companies">Google, Amazon</div>
+                    <div class="domain-description">
+                        <ul>
+                            <li>Shipped first-to-market USB Type-C Chromebook while authoring industry specification</li>
+                            <li>Partnered with Quanta as ODM</li>
+                            <li>Defensive publication on battery detection (Google)</li>
+                            <li>Refined high-speed IO methodologies for Kindle at scale (Amazon)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="domain-card">
+                    <div class="domain-title">Robotics</div>
+                    <div class="domain-companies">Google X</div>
+                    <div class="domain-description">
+                        <ul>
+                            <li>Defined power architecture and system integrity for autonomous platforms</li>
+                            <li>Identified need for and led battery compliance (UL2271, UN38.3) with battery pack vendors in moonshot environment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="domain-card">
+                    <div class="domain-title">Telepresence</div>
+                    <div class="domain-companies">Google Labs</div>
+                    <div class="domain-description">
+                        <ul>
+                            <li>Built Product Integrity and system integration frameworks</li>
+                            <li>Key member in vendor selection for ODM/JDM model</li>
+                            <li>Partnered with HP for prototype to mass production</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achievements">
+                <h3>Strategic Impact & Leadership</h3>
+                <div class="achievements-grid">
+                    <div class="achievement-item">
+                        <div class="achievement-number">30x</div>
+                        <div class="achievement-text">Technical velocity: Productivity gains taking AI hacks to production</div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-number">$8M+</div>
+                        <div class="achievement-text">Financial impact: Cost savings with engineering solutions for silent data corruption</div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-number">$1.2M</div>
+                        <div class="achievement-text">Strategic funding: Secured budget to spearhead critical engineering initiatives</div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-number">500+</div>
+                        <div class="achievement-text">People leadership: Candidates interviewed across companies</div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-number">100+</div>
+                        <div class="achievement-text">Talent growth: Individuals mentored and distributed teams led</div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-number">19.6%</div>
+                        <div class="achievement-text">Operational excellence: Process redundancy reduction in 6 months</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Core Strategic Capabilities</h2>
+            
+            <div class="capabilities">
+                <div class="capability">
+                    <div class="capability-title">AI Frontrunner & Innovation</div>
+                    <div class="capability-list">
+                        AI-Powered Product Development | Full-Stack AI Application Architecture | Productivity Enhancement Strategy 
+                        (30x team efficiency gains) | AI Code Quality Standards & Review | Novel Technology Commercialization | 
+                        Patent (pending) for silicon optimization
+                    </div>
+                </div>
+
+                <div class="capability">
+                    <div class="capability-title">Cross-Domain Technology Building & Scaling</div>
+                    <div class="capability-list">
+                        0-1 Product & Vertical Building | Strategic Roadmap Development | Cross-Functional Ecosystem Orchestration | 
+                        Ambiguity Navigation & Framework Creation | Business Value Translation from Technical Complexity
+                    </div>
+                </div>
+
+                <div class="capability">
+                    <div class="capability-title">Strategic Partnerships & Collaboration</div>
+                    <div class="partnerships">
+                        <div class="partnerships-title">Partnership Ecosystem:</div>
+                        <div class="partnership-categories">
+                            <span class="partnership-tag">Silicon Vendors (Broadcom)</span>
+                            <span class="partnership-tag">ODM/JDM (Quanta, HP, Dell)</span>
+                            <span class="partnership-tag">Component Vendors</span>
+                            <span class="partnership-tag">Cable & Equipment Vendors</span>
+                            <span class="partnership-tag">EDA Tool Vendors</span>
+                            <span class="partnership-tag">Compliance (UL)</span>
+                            <span class="partnership-tag">Industry-Academia (GSA-WLI)</span>
+                            <span class="partnership-tag">Consumer Electronics Interop Events</span>
+                            <span class="partnership-tag">Spec Development (USB-C/HDMI/DP)</span>
+                            <span class="partnership-tag">IEEE Conferences</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="capability">
+                    <div class="capability-title">Cross-Domain Technical Expertise</div>
+                    <div class="capability-list">
+                        Hyperscale Infrastructure & Fleet Optimization | GPU/ASIC | Data Center Systems | Consumer Electronics Scaling | 
+                        Robotics & Telepresence Platforms | Hardware-Software Integration
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <a href="mailto:nithyajags@gmail.com" class="cta-button">Let's Connect</a>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Nithya Jagannathan. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
